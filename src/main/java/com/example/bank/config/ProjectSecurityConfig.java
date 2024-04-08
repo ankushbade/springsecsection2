@@ -21,6 +21,13 @@ public class ProjectSecurityConfig
 	                .formLogin(Customizer.withDefaults())
 	                .httpBasic(Customizer.withDefaults());
 	        return http.build();
+	        
+	        /*http.authorizeHttpRequests().requestMatchers("/myAccount","/myBalance","/myLoans","/myCards").authenticated()
+			        .requestMatchers("/notices","/contact").permitAll()
+			        .and().formLogin()
+			        .and().httpBasic();
+			  return http.build();
+	         */
 
 	        /**
 	         *  Configuration to deny all the requests
